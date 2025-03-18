@@ -3333,7 +3333,7 @@ spec:
                           type: array
                         ownNamespace:
                           description: Includes the namespace in which the Prometheus
-                            pod exists to the list of watched namesapces.
+                            pod exists to the list of watched namespaces.
                           type: boolean
                       type: object
                     noProxy:

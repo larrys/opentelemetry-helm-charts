@@ -25,7 +25,7 @@
 {{- end}}
 
 {{- if not .Values.configMap.create }}
-[WARNING] "configMap" wil not be created and "config" will not take effect.
+[WARNING] "configMap" will not be created and "config" will not take effect.
 {{ end }}
 
 {{- if and .Values.configMap.create .Values.configMap.existingName }}

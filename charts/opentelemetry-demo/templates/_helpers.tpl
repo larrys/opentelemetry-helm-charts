@@ -51,7 +51,7 @@ opentelemetry.io/name: {{ .name }}
 {{- end }}
 {{- end }}
 
-{{- define "otel-demo.envOverriden" -}}
+{{- define "otel-demo.envOverridden" -}}
 {{- $mergedEnvs := list }}
 {{- $envOverrides := default (list) .envOverrides }}
 

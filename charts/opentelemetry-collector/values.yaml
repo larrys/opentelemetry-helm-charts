@@ -90,7 +90,7 @@ configMap:
 
 
 # When enabled, the chart will configure the collector to emit its traces, metrics, and logs over http via the OTLP using the Otel Go SDK.
-# If internalTelemetryViaOTLP.metrics.enabled Ithe chart will remove the default prometheus receiver (which was configured to scrape the Collector's metrics)
+# If internalTelemetryViaOTLP.metrics.enabled the chart will remove the default prometheus receiver (which was configured to scrape the Collector's metrics)
 # and the service.telemetry.metrics.address value.
 # Learn more about the Collector telemetry at https://opentelemetry.io/docs/collector/internal-telemetry/.
 #
@@ -208,7 +208,7 @@ config:
 
 # Helm currently has an issue (https://github.com/helm/helm/pull/12879) when using null to remove
 # default configuration from a subchart. The result is that you cannot remove default configuration
-# from `config`, such as a specific recevier or a specific pipeline, when the chart is used as a
+# from `config`, such as a specific receiver or a specific pipeline, when the chart is used as a
 # subchart.
 #
 # Until the helm bug is fixed, this field is provided as an alternative when using this chart as a subchart.

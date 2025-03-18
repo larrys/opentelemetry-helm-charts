@@ -12,7 +12,7 @@ should be last.
 {{- $allEnvs := list }}
 
 {{- if .useDefault.env  }}
-{{-   $defaultEnvs := include "otel-demo.envOverriden" (dict "env" .defaultValues.env "envOverrides" .defaultValues.envOverrides) | mustFromJson }}
+{{-   $defaultEnvs := include "otel-demo.envOverridden" (dict "env" .defaultValues.env "envOverrides" .defaultValues.envOverrides) | mustFromJson }}
 {{-   range $defaultEnvs }}
 {{-     if eq .name "OTEL_RESOURCE_ATTRIBUTES" }}
 {{-       $resourceAttributesEnv = . }}
@@ -23,7 +23,7 @@ should be last.
 {{- end }}
 
 {{- if or .env .envOverrides }}
-{{-   $localEnvs := include "otel-demo.envOverriden" . | mustFromJson }}
+{{-   $localEnvs := include "otel-demo.envOverridden" . | mustFromJson }}
 {{-   range $localEnvs }}
 {{-     if eq .name "OTEL_RESOURCE_ATTRIBUTES" }}
 {{-       $resourceAttributesEnv = . }}

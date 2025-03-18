@@ -17,7 +17,7 @@ The deprecated memory ballast extension has been removed from the default config
 
 ## 0.88.0 to 0.89.0
 
-> [!WARNING]  
+> [!WARNING]
 > Critical content demanding immediate user attention due to potential risks.
 
 As part of working towards using the [OpenTelemetry Collector Kubernetes Distro](https://github.com/open-telemetry/opentelemetry-collector-releases/tree/main/distributions/otelcol-k8s) by default, the chart now requires users to explicitly set an image repository. If you are already explicitly setting an image repository this breaking change does not affect you.
@@ -57,7 +57,7 @@ See [Security Best Practices docummentation](https://github.com/open-telemetry/o
 
 ## 0.75.1 to 0.76.0
 
-Enable the `useGOMEMLIMIT` feature flag by default. This means by default the chart now does not use the Memory Ballast Extension and any custom configuraiton applied to the Memory Ballast Extension is ignored.
+Enable the `useGOMEMLIMIT` feature flag by default. This means by default the chart now does not use the Memory Ballast Extension and any custom configuration applied to the Memory Ballast Extension is ignored.
 
 **If you're still interested in using the Memory Ballast Extension set this back to false.**
 
@@ -242,7 +242,7 @@ The `agentCollector` and `standaloneCollector` config sections have been removed
 
 [Remove two-deployment mode](https://github.com/open-telemetry/opentelemetry-helm-charts/pull/159)
 
-The ability to install both the agent and standalone collectors simultaneous with the chart has been removed.  Installs/upgrades where both  `.Values.agentCollector.enabled` and `.Values.standloneCollector.enables` are true will fail.  `agentCollector` and `standloneCollector` have also be deprecated, but backward compatibility has been maintained.
+The ability to install both the agent and standalone collectors simultaneous with the chart has been removed.  Installs/upgrades where both  `.Values.agentCollector.enabled` and `.Values.standaloneCollector.enables` are true will fail.  `agentCollector` and `standaloneCollector` have also be deprecated, but backward compatibility has been maintained.
 
 ### To run both a deployment and daemonset
 
@@ -291,7 +291,7 @@ The `agentCollector` and `standaloneCollector` sections in values.yaml have been
 mode: <daemonset|deployment>
 ```
 
-The following fields have also been added to the root-level to replace the depracated `agentCollector` and `standaloneCollector` settings.
+The following fields have also been added to the root-level to replace the deprecated `agentCollector` and `standaloneCollector` settings.
 
 ```yaml
 containerLogs:
